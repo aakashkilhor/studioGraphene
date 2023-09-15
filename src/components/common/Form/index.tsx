@@ -1,6 +1,6 @@
 import React from "react";
 import { useForm, Controller, SubmitHandler } from "react-hook-form";
-import { TextField, Button, Container } from "@mui/material";
+import { TextField, Button, Box } from "@mui/material";
 import styles from "./styles";
 
 type FormInputs = {
@@ -14,14 +14,16 @@ const Form = () => {
     handleSubmit,
     control,
     formState: { errors },
+    reset,
   } = useForm<FormInputs>();
 
   const onSubmit: SubmitHandler<FormInputs> = (data) => {
     console.log(data);
+    reset()
   };
 
   return (
-    <Container maxWidth="sm">
+    <Box sx={styles.container}>
       <form onSubmit={handleSubmit(onSubmit)}>
         <Controller
           name="name"
@@ -34,7 +36,7 @@ const Form = () => {
               sx={styles.input}
               fullWidth
               margin="normal"
-              InputLabelProps={{ style: { padding: "0px 10px" } }}
+              InputLabelProps={{ style: { padding: "0px 10px",color:"rgba(255, 255, 255, 0.50)" } }}
               error={!!errors.name}
               helperText={errors.name ? "Name is required" : ""}
               {...field}
@@ -55,7 +57,7 @@ const Form = () => {
               fullWidth
               margin="normal"
               error={!!errors.email}
-              InputLabelProps={{ style: { padding: "0px 10px" } }}
+              InputLabelProps={{ style: { padding: "0px 10px",color:"rgba(255, 255, 255, 0.50)" } }}
               helperText={errors.email ? "Invalid email address" : ""}
               {...field}
             />
@@ -63,8 +65,8 @@ const Form = () => {
           rules={{
             required: "Email is required",
             pattern: {
-              value: /^\S+@\S+$/i,
-              message: "Invalid email address",
+              value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,5}$/i,
+              message: "Invalid Email ID. Please try again.",
             },
           }}
         />
@@ -83,17 +85,17 @@ const Form = () => {
               fullWidth
               sx={styles.input}
               margin="normal"
-              InputLabelProps={{ style: { padding: "0px 10px" } }}
+              InputLabelProps={{ style: { padding: "0px 10px",color:"rgba(255, 255, 255, 0.50)" } }}
               {...field}
             />
           )}
         />
 
         <Button type="submit" sx={styles.submit}>
-          Submit
+          Send
         </Button>
       </form>
-    </Container>
+    </Box>
   );
 };
 
