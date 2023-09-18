@@ -40,11 +40,11 @@ const styles : Record<string, SxProps>={
         width:"18%",
       },
       item:{
-        fontSize:"18px",
+        fontSize:{xs:"14px",sm:"18px"},
         fontFamily:"work sans"
       },
       itemActive:{
-        fontSize:"26px",
+        fontSize:{xs:"18px",sm:"26px"},
         fontFamily:"syne"
       },
       cardContainer:{

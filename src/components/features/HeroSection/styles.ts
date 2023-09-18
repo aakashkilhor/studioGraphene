@@ -21,6 +21,9 @@ const styles: Record<string, SxProps> = {
     fontFamily: "Work Sans",
     gap: "10px",
   },
+  ham:{
+    display:{xs:"block",md:"none"}
+  },
   titleName: {
     fontSize: "40px",
     fontWeight: "300",
@@ -42,6 +45,22 @@ const styles: Record<string, SxProps> = {
     padding: "1% 10%",
     width: "55%",
     justifyContent: "space-between",
+    position:"relative"
+  },
+  drawer:{
+    position:"absolute",
+    bottom:"0px",
+    padding:"40px",
+  },
+  drawerItem:{
+    backgroundColor:"black",
+    fontFamily:"work sans",
+    color:"#fff",
+    display:"flex",
+    flexDirection:"column",
+    alignItems:"center",
+    justifyContent:"center",
+    padding:"40px"
   },
   menuItem: {
     fontSize: "18px",
