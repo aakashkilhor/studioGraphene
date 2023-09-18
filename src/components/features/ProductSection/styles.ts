@@ -32,6 +32,7 @@ const styles : Record<string, SxProps>={
         alignSelf:"flex-start",
         flexDirection:{xs:"row",sm:"column"},
         gap:"10px",
+        width:"18%",
       },
       item:{
         fontSize:"18px",
@@ -43,7 +44,7 @@ const styles : Record<string, SxProps>={
       },
       cardContainer:{
         display:"flex",
-        width:"80%",
+        width:"78%",
         gap:"20px",
         overflowX:"scroll"
     },
