@@ -7,8 +7,7 @@ const ProductSection = () => {
 
   const [categories, setCategories] = useState([]);
   const [products, setProducts] = useState([]);
-  const [active, setActive] = useState("jewelery");
-  const [filtered,setFiltered] = useState([])
+  const [active, setActive] = useState("jewelery")
 
   useEffect(() => {
     axios.get('https://fakestoreapi.com/products/categories')
@@ -34,7 +33,6 @@ const ProductSection = () => {
     setActive(category)
   }
 
-  const filteredProducts = products.filter((product:any) => product?.category === active);
 
   return (
     <Box sx={styles.container}>
