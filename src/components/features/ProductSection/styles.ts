@@ -43,7 +43,7 @@ const styles : Record<string, SxProps>={
       },
       cardContainer:{
         display:"flex",
-        width:"84%",
+        width:"80%",
         gap:"20px",
         overflowX:"scroll"
     },
