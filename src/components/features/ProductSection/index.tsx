@@ -44,7 +44,10 @@ const ProductSection = () => {
           <Box sx={styles.star} component="img" src="/assets/starBlack.svg" alt="" />
         </Box>
         </Box>
-       <Box sx={styles.arrows}>Arrows</Box>
+       <Box sx={styles.arrows}>
+       <Box  component="img" src="/assets/leftArrow.svg" alt="" />
+       <Box  component="img" src="/assets/rightArrow.svg" alt="" />
+       </Box>
        <Box sx={styles.categoryContainer}>
        {categories.map((category, index) => (
         <Box sx={category===active?styles.itemActive:styles.item} key={index} onClick = {()=>handleCategory(category)}>

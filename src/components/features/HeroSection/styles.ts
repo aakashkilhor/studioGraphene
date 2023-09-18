@@ -68,11 +68,12 @@ const styles: Record<string, SxProps> = {
     lineHeight: "28px",
   },
   tagContainer: {
-    fontSize: "135px",
+    fontSize: {xs:"55px",sm:"135px"},
     fontFamily: "syne",
     fontWeight: "800",
     lineHeight: "80%",
     paddingBottom:"60px",
+    paddingTop:{xs:"360px",sm:"20px",md:"0px"},
   },
   tagLine: {
     marginLeft: "10%",
@@ -102,8 +103,8 @@ const styles: Record<string, SxProps> = {
   },
   starBottom: {
     position: "absolute",
-    marginLeft: "100%",
-    marginTop: "-11.5px",
+    marginLeft: "98%",
+    marginTop: "-46px",
   },
   seeMore:{
     fontSize:"18px",
@@ -111,13 +112,13 @@ const styles: Record<string, SxProps> = {
     color:"#fff",
     marginLeft:"10%",
     padding:"0px 5px",
-    marginTop:"30px",
+    marginTop:{xs:"50px",sm:"30px"},
     width:"fit-content",
     border:"1px solid #fff"
   },
   orangeContainer:{
     position:"relative",
-    width:"100%"
+    width:"100%",
   },
   orange:{
     position:"absolute",
@@ -152,7 +153,7 @@ const styles: Record<string, SxProps> = {
     display:{xs:"block",md:"none"},
     zIndex:"5",
     right:"0",
-    bottom:"-145px",
+    bottom:"-163px",
   },
 };
 

@@ -3,20 +3,21 @@ import { SxProps } from "@mui/material";
 const styles : Record<string, SxProps>={
     container:{
         display:"flex",
+        flexDirection:{xs:"column",sm:"row"},
         flexWrap:"wrap",
         margin:"2% 0% 2% 5%",
         alignItems:"center",
         gap:"40px"
     },
     heading:{
-        fontSize:"90px",
+        fontSize:{xs:"70px",sm:"90px"},
         fontWeight:"600",
         fontFamily:"syne",
-        width:"70%"
+        width:{xs:"100%",sm:"70%"},
     },
     divider: {
         borderTop: "1px solid #000",
-        width: "50%",
+        width: "70%",
         position: "relative",
       },
       star: {
@@ -25,7 +26,11 @@ const styles : Record<string, SxProps>={
         marginTop: "-11.5px",
       },
       arrows:{
-        width:"25%"
+        width:"25%",
+        display:"flex",
+        padding:{xs:"40px",md:"0px"},
+        gap:"10px",
+        order:{xs:"4",md:"0"}
       },
       categoryContainer:{
         display:"flex",
@@ -44,7 +49,7 @@ const styles : Record<string, SxProps>={
       },
       cardContainer:{
         display:"flex",
-        width:"78%",
+        width:{xs:"95%",md:"78%"},
         gap:"20px",
         overflowX:"scroll"
     },

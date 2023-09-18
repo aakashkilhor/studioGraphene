@@ -62,7 +62,7 @@ const HeroSection = () => {
             </Box>
         </Box>
         <Box sx={styles.dividerStar}>
-          <Box sx={styles.starBottom} component="img" src="/assets/star.svg" alt="" />
+          <Box sx={styles.starBottom} component="img" src="/assets/starBig.svg" alt="" />
         </Box>
         <Box sx={styles.seeMore}>See More <Box component="span"><Box component="img" src="/assets/seeArrow.svg" /></Box></Box>
       </Box>
